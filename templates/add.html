@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add asset data page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .border-md {
+    border-width: 2px;
+}
+
+
+
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+body {
+    min-height: 100vh;
+    
+}
+
+.form-control:not(select) {
+    padding: 1.5rem 0.5rem;
+}
+
+select.form-control {
+    height: 52px;
+    padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+.content-table{
+            border-collapse: collapse;
+            margin: 1px 0;
+            font-size: 18px;
+            min-width: 400px;
+            border-radius: 14px 14px 14px 14px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+        }
+        .content-table thead tr{
+            background-color: #009879;
+            color: #fff;
+            text-align: left;
+            font-weight: bold;
+
+        }
+        .content-table th,
+        .content-table td{
+            padding: 15px 30px;
+
+        }
+        .bg{
+            background-color: rgb(245, 248, 248);
+        }
+        
+        .btn-2g {
+    border-radius: 40px;
+}
+.btn-2 {
+    background: #cb4e4e;
+    color: #fff;
+    box-shadow: 0 6px #808680;;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
+.btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 7px 29px;
+    display: inline-block;
+    margin: 23px 270px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    background-color:  #d0dbd0;
+}
+        
+       
+       
+    </style>
+
+</head>
+<body>
+    <header class="header ">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
+                <!-- Navbar Brand -->
+                <a href="backhome1" class="navbar-brand">
+                    <img src="https://res.cloudinary.com/mhmd/image/upload/v1571398888/gfmj" alt="Asset Management" width="150">
+                </a>
+                
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row py-5 mt-4 align-items-center">
+            <!-- For Demo Purpose -->
+            <div class="col-md-5 pr-lg-5 mb-5 mb-md-0" style="padding-top: 40px;">
+                <img src="{% static 'add.jpg' %}" style="padding-left: 59px;"
+                width="400px;" height="300px">
+                <h1 style="margin-left: 76px;">Add asset data</h1>
+                
+                </p>
+            </div>
+<div>
+    <form action="asset-add" method="POST" enctype="multipart/form-data" style="font-size: 20px; padding-left: 471px;">
+        {% csrf_token %}
+        <table class="content-table" style="margin-left: 100px;">
+            <tr>
+                <td>
+                    <label for="ide"></label><br>
+                    <input class="bg" placeholder="Id" type="text" id="ide" name="ide" required><br></td>
+                <td>
+                    <label for="dev"></label><br>
+                    <input class="bg" placeholder="Device" type="text" id="dev" name="dev" required>
+            </td>
+            </tr><br>
+            <tr>
+                <td>
+                    <label for="dep"></label><br>
+                    <input class="bg" placeholder="Department" type="text" id="dep" name="dep" required>
+                </td>
+                <td>
+                    <label for="own"></label><br>
+                    <input class="bg"  placeholder="Owner" type="text" id="own" name="own" required >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="loc"></label><br>
+                    <input class="bg" placeholder="Location" type="text" id="loc" name="loc" required >
+                </td>
+                <td>
+                    <label for="sts"></label><br>
+                    <input class="bg" placeholder="Status" type="text" id="sts" name="sts" required>
+                    <br>
+            </tr><br><br>
+        </table>
+            
+                <button class="btn btn-2 btn-2g" onclick="myFunction()">Submit</button>
+           
+            <script>
+                function myFunction() {
+                  alert("Data added successfully!");
+                }
+            </script>
+        
+    </form>
+</div>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset-data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .content-table{
+            border-collapse: collapse;
+            margin: 1px 0;
+            font-size: 18px;
+            min-width: 400px;
+            border-radius: 14px 14px 1px 1px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+        }
+        .content-table thead tr{
+            background-color: #009879;
+            color: #fff;
+            text-align: left;
+            font-weight: bold;
+
+        }
+        .content-table th,
+        .content-table td{
+            padding: 15px 30px;
+
+        }
+        .content-table tbody tr {
+            border-bottom: 1px solid rgb(150, 150, 150);
+        }
+        .content-table tbody tr:nth-of-type(even){
+            background-color: rgba(167, 154, 167, 0.2);
+
+        }
+        .content-table tbody tr:last-of-type{
+            border-bottom:2px solid #009879;
+        }
+        .content-table tbody tr.active-row{
+            font-weight: bold;
+            color: #009879;
+        }
+        body{
+            background-color: rgb(187, 195, 197);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-inverse" style="position: fixed; z-index: 1; width: 100%;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="backhome1">Home</a></li>
+          </ul>
+          <div>
+          <p style="padding-top: 14px; font-size: 18px;">--Asset Management</p></div>
+        </div>
+      </nav>
+</header>
+<section style="padding-top: 73px;
+padding-left: 279px;">
+<div style="padding-right: 313px;"><h2 style="text-align: center;">Asset Data</h2></div>
+
+<table style="margin-top: 60px;" class="content-table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Device</th>
+            <th>Department</th>
+            <th>Owner</th>
+            <th>Location</th>
+            <th>Status</th>
+        </tr>   
+    </thead>
+    {% for i in data %}
+    <tbody>
+        <tr >
+            <td>{{i.ide}}</td>
+            <td>{{i.dev}}</td>
+            <td>{{i.dep}}</td>
+            <td>{{i.own}}</td> 
+            <td>{{i.loc}}</td>
+            <td>{{i.sts}}</td>
+        </tr>
+    </tbody>
+    {% endfor %}
+</table>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</body>
+</html>

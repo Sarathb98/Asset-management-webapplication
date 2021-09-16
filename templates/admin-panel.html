@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        
+        
+        background-color:  #02536b;
+    }
+    .button {
+  border-radius: 4px;
+  background-color: #000;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.icon-color{
+    color:#5f61f9;;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div style="font-size: 51px; width: 100%;" class="row text-white">
+        <div class="col-md-6 col-9 p-4 pl-5">
+            <h2 style="font-weight: 601; text-align: center;">Welcome to the admin dashboard</h2> 
+    
+        </div>
+        </div>
+        
+    </header>
+
+    <section class="bg-light pt-4  align-items-center" style="padding-top: 92px;">
+        <div class="container">
+            <div class="col-md-4 " style="padding-left: 230px;">
+                <a href="view-btn"><button class="button"><span>View  <i class="fa fa-eye icon-color" style=" text-shadow:2px 2px 4px #303542;" aria-hidden="true"></i> </span></button></a>
+                <a href="add-btn"><button class="button"><span>Add  <i style=" text-shadow:2px 2px 4px #303542;" class="fa fa-plus icon-color" aria-hidden="true"></i></span></button></a>
+                <a href="edit-btn"><button class="button"><span>Edit  <i class="fa fa-edit icon-color" style=" text-shadow:2px 2px 4px #303542;" ></i></span></button></a>
+               <a href="del-btn"><button class="button"><span>Delete  <i class="fa fa-trash-o icon-color"  style=" text-shadow:2px 2px 4px #303542;"></i></span></button></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
